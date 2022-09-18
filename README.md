@@ -6,7 +6,7 @@
 Are you tired of having several game launchers for your favourite game? Want to keep track of all your games in the same place? Well, PlayItNow is the solution.
 PlayItNow allows you to buy any game you want on any platform ( that it's compatible with ). Browse your favorite games by genre, check the top selling games or the current "hot" games and enjoy the experience of having a Game-Managing website.
 
-###### note : this is a "theoretical" website, nothing here will in the real world.
+###### note : this is a "theoretical" website, nothing here will work in the real world.
 
 
 ## Steps to test this site:
