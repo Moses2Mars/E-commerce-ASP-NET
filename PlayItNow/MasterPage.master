@@ -1,0 +1,174 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+     <head>
+        <meta charset="utf-8">
+        <title>E STore</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="eCommerce HTML Template Free Download" name="keywords">
+        <meta content="eCommerce HTML Template Free Download" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/slick/slick.css" rel="stylesheet">
+        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+<body>
+    <form id="form1" runat="server">
+
+ <!-- Navbar Start -->
+        <div class="main-navbar">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md">                        
+
+                    <a href="Home.aspx" class="nav-item-border-right"><img class="nav-item nav-link active nav-item-border-left" src="img/logo.png" style="height: 3.5em;" alt="logo" /></a>
+                    <div class="navbar-nav">
+                        <div class="nav-item dropdown">
+                            <a href="MyAccount.aspx" class="nav-link nav-item-border-right" style="display: inline-block; padding-left: 4em; padding-right: 4em;">User</a>
+
+                        </div>
+                    </div>
+                    <div class="navbar-nav">
+                        <div class="nav-item dropdown">
+                            <a href="ProductList.aspx" class="nav-link dropdown-toggle nav-item-border-right" data-toggle="dropdown" style="display: inline-block; padding-left: 4em; padding-right: 4em;">Games</a>
+                            <div class="dropdown-menu">
+                                <a href="ProductList.aspx" class="dropdown-item">All Games</a>
+                                <a href="ProductList.aspx?query=New" class="dropdown-item">New</a>
+                                <a href="ProductList.aspx?query=TopSelling" class="dropdown-item">Top Selling</a>
+                                <a href="ProductList.aspx?query=Free" class="dropdown-item">Free</a>
+                                <a href="ProductList.aspx?query=OnSale" class="dropdown-item">On Sale</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="Contact.aspx" class="nav-item nav-link nav-item-border-right">Contact Us</a>
+
+                    
+                    <div class="navbar-nav ml-auto">
+                        <a href="LoginRegister.aspx" class="nav-link" runat="server" id="loginRegister">Login/Register</a>
+                        <a href="MyAccount.aspx" class="nav-link" runat="server" id="showUsername"></a>
+                        <a href="Wishlist.aspx" class="btn wishlist">
+                            <i class="fa fa-heart"></i>
+                            <span>(<asp:Label ID="wishlistCount" runat="server"></asp:Label>)</span>
+                        </a>
+                        <a href="Cart.aspx" class="btn cart">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>(<asp:Label ID="cartCount" runat="server"></asp:Label>)</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar end -->
+        <div style="margin: 60px;">
+        </div>
+            <asp:ContentPlaceHolder id="contentTest" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Get in Touch</h2>
+                            <div class="contact-info">
+                                <p><i class="fa fa-map-marker"></i>Lebanon, Beirut, Achrafieh</p>
+                                <p><i class="fa fa-envelope"></i>platiynow@games.com</p>
+                                <p><i class="fa fa-phone"></i>+961 01234567</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Follow Us</h2>
+                            <div class="contact-info">
+                                <div class="social">
+                                    <a href="/"><i class="fab fa-twitter"></i></a>
+                                    <a href="/"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="/"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="/"><i class="fab fa-instagram"></i></a>
+                                    <a href="/"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Company Info</h2>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Condition</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Purchase Info</h2>
+                            <ul>
+                                <li><a href="#">Payment Policy</a></li>
+                                <li><a href="#">Return Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row payment align-items-center">
+                    <div class="col-md-6">
+                        <div class="payment-method">
+                            <h2>We Accept:</h2>
+                            <img src="img/payment-method.png" alt="Payment Method" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Footer Bottom Start -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 copyright">
+                        <p>Copyright &copy; AUST Web Project 2022. All Rights Reserved</p>
+                    </div>
+
+                    <div class="col-md-6 template-by">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom End -->       
+        
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    </form>
+
+             <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+        
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+</body>
+</html>
